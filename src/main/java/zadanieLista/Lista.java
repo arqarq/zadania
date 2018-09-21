@@ -5,6 +5,7 @@ import java.util.Optional;
 class Lista<T> {
     private Node<T> head = null;
     private Node<T> current;
+    private Node<T> current_before;
 
     Optional<Node<T>> search(T value) {
         if (head == null) {
@@ -39,7 +40,7 @@ class Lista<T> {
             head = newNode;
             return;
         }
-        if (index == 0){
+        if (index == 0) {
             newNode.setNext(head);
             head = newNode;
             return;
@@ -51,6 +52,28 @@ class Lista<T> {
         }
         newNode.setNext(current.getNext());
         current.setNext(newNode);
+    }
+
+    void delete(int index) {
+        if (head == null) {
+            return;
+        }
+        if (index == 0) {                               // na wypadek kasowania pierwszego (0) elementu
+            head = head.getNext();
+            return;
+        }
+        if (head.getNext() == null && index > 0) {      // na wypadek kolejki jednoelementowej, kasuje ten jeden element
+            head = null;
+            return;
+        }
+        current = head;
+        current_before = head;
+        while (current.getNext() != null && index > 0) {
+            current_before = current;
+            current = current.getNext();
+            index--;
+        }
+        current_before.setNext(current.getNext());
     }
 
     @Override

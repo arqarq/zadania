@@ -24,7 +24,6 @@ class Node<T> {
     public String toString() {
         return "Node{" +
                 "value=" + value +
-                ", next=" + next +
-                '}';
+                ", next=" + next + '}';
     }
 }
