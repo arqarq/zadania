@@ -22,6 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+# z Mavena ----------------------------------------------------------------------------------
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -35,4 +36,7 @@ buildNumber.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 
-.idea/
+# IntelliJ IDEA -----------------------------------------------------------------------------
+.idea
+
+# project specific files --------------------------------------------------------------------
