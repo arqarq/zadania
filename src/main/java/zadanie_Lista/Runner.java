@@ -1,4 +1,4 @@
-package zadanieLista;
+package zadanie_Lista;
 
 class Runner {
     public static void main(String[] args) {

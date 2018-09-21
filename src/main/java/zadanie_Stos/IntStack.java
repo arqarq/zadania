@@ -1,4 +1,4 @@
-package zadanieStos;
+package zadanie_Stos;
 
 import java.util.Arrays;
 import java.util.EmptyStackException;

@@ -1,4 +1,4 @@
-package zadanieLista;
+package zadanie_Lista;
 
 import java.util.Optional;
 

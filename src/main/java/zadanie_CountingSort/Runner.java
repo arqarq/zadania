@@ -1,8 +1,8 @@
-package zadanieCountingSort;
+package zadanie_CountingSort;
 
 import static _paczkaPomocnicza.Utility.printArrayOne;
-import static zadanieCountingSort.Sort.countingSort;
-import static zadanieCountingSort.Sort.findK;
+import static zadanie_CountingSort.Sort.countingSort;
+import static zadanie_CountingSort.Sort.findK;
 
 class Runner {
     public static void main(String[] args) {

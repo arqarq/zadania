@@ -1,4 +1,4 @@
-package zadanieKolejka;
+package zadanie_Kolejka;
 
 class EmptyQueue extends Exception {
     EmptyQueue() {

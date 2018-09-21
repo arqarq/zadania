@@ -1,4 +1,4 @@
-package zadanieKolejka;
+package zadanie_Kolejka;
 
 import java.util.EmptyStackException;
 
