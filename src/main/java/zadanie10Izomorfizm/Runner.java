@@ -1,6 +1,6 @@
-package zadanie10Izomorficzne;
+package zadanie10Izomorfizm;
 
-import static zadanie10Izomorficzne.Klasa.isIzomorf;
+import static zadanie10Izomorfizm.Klasa.isIzomorf;
 
 class Runner {
     public static void main(String[] args) {
