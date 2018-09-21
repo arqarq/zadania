@@ -1,4 +1,4 @@
-package zadanie10_Izomorfizm;
+package zadanie_1_10_Izomorfizm;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package zadanie_CountingSort;
+package zadanie_2_07_CountingSort;
 
 class Sort {
     static int[] countingSort(int[] A, int[] B, int k) {
