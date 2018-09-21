@@ -78,7 +78,7 @@ class Lista<T> {
 
     @Override
     public String toString() {
-        StringBuilder s = /*"Lista: "*/ new StringBuilder("Lista: ");
+        StringBuilder s = new StringBuilder("Lista: ");
         current = head;
         while (current != null) {
             s.append(current.getValue()).append(", ");
