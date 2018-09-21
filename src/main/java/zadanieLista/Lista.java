@@ -84,6 +84,10 @@ class Lista<T> {
             s.append(current.getValue()).append(", ");
             current = current.getNext();
         }
-        return s.substring(0, s.length() - 2);
+        if (s.toString().equals("Lista: ")) {
+            return s.append("{null}").toString();
+        } else {
+            return s.substring(0, s.length() - 2);
+        }
     }
 }

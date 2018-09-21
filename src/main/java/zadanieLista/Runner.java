@@ -28,5 +28,7 @@ class Runner {
         System.out.println(lista);
         lista.delete(1000);
         System.out.println(lista);
+        lista.insert("Zuza", 1000);
+        System.out.println(lista);
     }
 }
