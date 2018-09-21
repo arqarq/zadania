@@ -5,7 +5,7 @@ class Runner {
         Lista<String> lista = new Lista<>();
         lista.append("abc");
         lista.append("def");
-        System.out.println(lista);
+        System.out.println(listaa);
         lista.search("abc").ifPresent(n -> System.out.println(n.getValue()));
         lista.search("abc").ifPresent(System.out::println);
         lista.insert("Ola", 0);
