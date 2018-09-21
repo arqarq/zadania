@@ -67,7 +67,7 @@ class Lista<T> {
             return;
         }
         current = head;
-        current_before = current;
+//        current_before = current;
         while (current.getNext() != null && index > 0) {
             current_before = current;
             current = current.getNext();
