@@ -62,7 +62,7 @@ class Lista<T> {
             head = head.getNext();
             return;
         }
-        if (head.getNext() == null && index > 0) {      // na wypadek kolejki jednoelementowej, kasuje ten jeden element
+        if (head.getNext() == null) {                   // na wypadek kolejki jednoelementowej, kasuje ten jeden element
             head = null;
             return;
         }
@@ -78,12 +78,12 @@ class Lista<T> {
 
     @Override
     public String toString() {
-        String s = "Lista: ";
+        StringBuilder s = /*"Lista: "*/ new StringBuilder("Lista: ");
         current = head;
         while (current != null) {
-            s += current.getValue() + ", ";
+            s.append(current.getValue()).append(", ");
             current = current.getNext();
         }
-        return s;
+        return s.substring(0, s.length() - 2);
     }
 }
