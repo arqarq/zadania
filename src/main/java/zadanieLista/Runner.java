@@ -3,8 +3,8 @@ package zadanieLista;
 class Runner {
     public static void main(String[] args) {
         Lista<String> lista = new Lista<>();
-        lista.append("abcd");
-        lista.append("defg");
+        lista.append("abc");
+        lista.append("def");
         System.out.println(lista);
         lista.search("abc").ifPresent(n -> System.out.println(n.getValue()));
         lista.search("abc").ifPresent(System.out::println);
