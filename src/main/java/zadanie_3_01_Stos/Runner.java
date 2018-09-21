@@ -1,4 +1,4 @@
-package zadanie_Stos;
+package zadanie_3_01_Stos;
 
 class Runner {
     public static void main(String[] args) {

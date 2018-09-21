@@ -1,4 +1,4 @@
-package zadanie_Lista;
+package zadanie_3_03_Lista;
 
 class Node<T> {
     private final T value;

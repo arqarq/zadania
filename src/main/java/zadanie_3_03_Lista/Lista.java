@@ -1,4 +1,4 @@
-package zadanie_Lista;
+package zadanie_3_03_Lista;
 
 import java.util.Optional;
 
@@ -74,6 +74,7 @@ class Lista<T> {
             index--;
         }
         current_before.setNext(current.getNext());
+        current.setNext(null);                          // koniecznie to? (w algorytmie w PDF jest)
     }
 
     @Override
