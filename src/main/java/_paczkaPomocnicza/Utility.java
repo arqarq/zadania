@@ -1,12 +1,19 @@
 package _paczkaPomocnicza;
 
+import java.util.Random;
+
 public class Utility {
     public static int[][] getRandomArray() {
         return new int[1][1];
     }
 
-    public static int[] getRandomArrayOne() {
-        return new int[0];
+    public static int[] getRandomArrayOne(int ile, int zakres){
+        Random random = new Random();
+        int[] array = new int[ile];
+        for(int i = 0; i < ile; i++){
+            array[i] = random.nextInt(zakres);
+        }
+        return array;
     }
 
     public static void printArray(int[][] array) {

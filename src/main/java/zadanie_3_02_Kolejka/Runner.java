@@ -25,6 +25,17 @@ class Runner {
             e.printStackTrace();
             System.err.println("Pusta kolejka!");
         }
-        queue.peak();
+//        queue.peak();
+
+        Queue queue1 = new Queue(3);
+        queue1.enqueue(1);
+        queue1.enqueue(2);
+        queue1.enqueue(3);
+        System.out.println(queue1.dequeue());
+        System.out.println(queue1.dequeue());
+        System.out.println(queue1.dequeue());
+        System.out.println(queue1.isEmpty());
+        queue1.enqueue(4);
+        System.out.println(queue1.dequeue());
     }
 }
