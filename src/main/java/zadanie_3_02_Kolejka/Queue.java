@@ -15,6 +15,13 @@ class Queue {
         this.rear = -1;
     }
 
+    private int inkr(int a){
+        if (a == array.length - 1){
+            return 0;
+        }
+        return ++a;
+    }
+
     boolean enqueue(int el) {
         if (isFull()) {
             return false;
@@ -26,11 +33,12 @@ class Queue {
             count++;
             return true;
         }
-        if (rear == array.length - 1) {
-            rear = 0;
-        } else {
-            rear++;
-        }
+        rear = inkr(rear);
+//        if (rear == array.length - 1) {
+//            rear = 0;
+//        } else {
+//            rear++;
+//        }
         array[rear] = el;
         count++;
         return true;
@@ -42,11 +50,12 @@ class Queue {
         }
         int temp = array[front];
         count--;
-        if (front == array.length - 1) {
-            front = 0;
-        } else {
-            front++;
-        }
+        front = inkr(front);
+//        if (front == array.length - 1) {
+//            front = 0;
+//        } else {
+//            front++;
+//        }
         if (count == 0) {
             front = -1;
             rear = -1;
