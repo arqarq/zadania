@@ -3,7 +3,7 @@ package zadanie_3_02_Kolejka;
 import java.util.EmptyStackException;
 
 class Queue {
-    private int[] array;
+    private final int[] array;                                                              // czy tu może być final?
     private int front;
     private int rear;
     private int count;
@@ -15,8 +15,8 @@ class Queue {
         this.rear = -1;
     }
 
-    private int inkr(int a){
-        if (a == array.length - 1){
+    private int inkr(int a) {
+        if (a == array.length - 1) {
             return 0;
         }
         return ++a;
