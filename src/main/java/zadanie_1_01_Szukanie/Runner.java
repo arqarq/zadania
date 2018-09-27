@@ -11,7 +11,7 @@ class Runner {
     public static void main(String[] args) {
 //        int[] data = {1, 2, 3, 4, 10, 6, 7, 8, 9, 10};
 //        int[] data = {1, 1, 1, 1, 1, 1, 1, 1, 1, 2};
-        int[] data = getRandomArrayOne(1000, 1000);
+        int[] data = getRandomArrayOne(1000, 600);
         int what_to_search = 551;
         Arrays.sort(data);
         System.out.println("Dane wejściowe:");

@@ -4,10 +4,10 @@ class Binary {
     /**
      * Wyszukiwanie binarne
      *
-     * @param data - wejściowa tablica liczb (rosnąca!)
-     * @param what_to_search - szukany element
-     * @return - data[0] pozycja, pod którą występuje szukany element lub -1, jeśli elementu nie ma;
-     *           data[1] ilość porównań
+     * @param data wejściowa tablica liczb (rosnąca!);
+     * @param what_to_search szukany element
+     * @return data[0] - pozycja, pod którą występuje szukany element lub -1, jeśli elementu nie ma;<br/>
+     *         data[1] - ilość porównań
      */
     static int[] searchBinary(int[] data, int what_to_search) {
         int left = 0;

@@ -16,10 +16,15 @@ class Streams {
         System.out.println(list1);
 
         // 2) Przy pomocy streamów wypisz na ekran pierwszy napis, który zaczyna się na literę "P".
-        strings.stream()
+        List<String> nowa = strings.stream()
                 .filter(s -> s.startsWith("P"))
-                .findFirst()
-                .ifPresent(System.out::println);
+                .collect(Collectors.toList());
+        System.out.println(nowa);
+        Optional<String> nowa2 = nowa.stream()
+                .findFirst();
+        System.out.println(nowa2.orElse("brak!"));
+//                .findFirst()
+//                .ifPresent(System.out::println);
 
         // 3) Używając streamów scal wszystkie napisy w jeden String w taki sposób, aby każdy napis zaczynał się
         // i kończył znakiem "#". Tak zmodyfikowane napisy w wynikowym Stringu powinny być przedzielone przecinkami.
@@ -55,28 +60,32 @@ class Streams {
                 .anyMatch(n -> n % 2 == 0 && n % 5 == 0));
 
 
-        Map<Integer, String> map = new HashMap<>();
+        Map<Integer, String> map = new HashMap<>(1);
         map.put(1, "Katarzyna");
         map.put(2, "Anna");
         map.put(3, "Jan");
         map.put(4, "Andrzej");
 
-        // 7) Przy pomocy streamów stwórz set, który będzie zawierał tylko damskie imiona (damskie imiona kończą się na literę "a"), z zamienionymi wszystkimi literami na wielkie.
+        // 7) Przy pomocy streamów stwórz set, który będzie zawierał tylko damskie imiona (damskie imiona kończą się na
+        // literę "a"), z zamienionymi wszystkimi literami na wielkie.
         Set<String> womenSet = map.entrySet().stream()
                 .filter(s -> s.getValue().endsWith("a"))
                 .map(x -> x.getValue().toUpperCase())
                 .collect(Collectors.toSet());
         System.out.println(womenSet);
 
-        // 8) Używając streamów stwórz mapę, w której będą tylko te pary klucz-wartość, w których wartość jest imieniem męskim.
+        // 8) Używając streamów stwórz mapę, w której będą tylko te pary klucz-wartość, w których wartość jest imieniem
+        // męskim.
         Map<Integer, String> menMap = map.entrySet().stream()
                 .filter(s -> !s.getValue().endsWith("a"))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         System.out.println(menMap);
 
-        // Zadanie bonus: Użyj streamów, aby policzyć średnią dla 5 randomowych liczb. Zwróć uwagę w API Javy jakie metody oferuje klasa Random.
-        new Random().ints(5)
-                .average()
-                .ifPresent(System.out::println);
+        // Zadanie bonus: Użyj streamów, aby policzyć średnią dla 5 randomowych liczb. Zwróć uwagę w API Javy jakie
+        // metody oferuje klasa Random.
+        OptionalDouble random = new Random().ints(5)
+                .average();
+//                .ifPresent(System.out::println);
+                System.out.println(random.orElse(0.0E0));
     }
 }
