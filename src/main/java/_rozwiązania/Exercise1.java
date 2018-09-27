@@ -1,7 +1,10 @@
-package _rozw;
+package _rozwiązania;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Exercise1 {
 
@@ -57,14 +60,30 @@ public class Exercise1 {
 
     public static void main(String[] args) {
 //        int[] array = {1, 5, 10, 17, 19, 28, 90, 110, 150};
-        int[] array = new int[10000];
-        Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(10000);
+        int[] array = new int[100];
+//        Random random = new Random();
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = random.nextInt(100);
+//        }
+//        Arrays.sort(array);
+        int x = 59;
+
+//        System.out.println("Linear search: " + linearSearch(array, x));
+//        System.out.println("Binary search: " + binarySearch(array, x));
+
+        ArrayList<Integer> a = new ArrayList<>();
+        for (int i = 0; i < 150; i++) {
+            a.add(i);
+        }
+        Collections.shuffle(a);
+//        List<Integer> b = a.subList(0, 100);
+        for (int i = 0; i < 100; i++) {
+            array[i] = a.get(i);
         }
         Arrays.sort(array);
-        int x = 597;
-
+//        int d = a.get(0);
+//        List b = a.subList(0, 4);
+//        a = a[0];
         System.out.println("Linear search: " + linearSearch(array, x));
         System.out.println("Binary search: " + binarySearch(array, x));
     }

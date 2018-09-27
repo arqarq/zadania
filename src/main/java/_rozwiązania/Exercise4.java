@@ -1,4 +1,4 @@
-package _rozw;
+package _rozwiązania;
 
 import java.util.Random;
 
