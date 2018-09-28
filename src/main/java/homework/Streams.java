@@ -86,6 +86,6 @@ class Streams {
         OptionalDouble random = new Random().ints(5)
                 .average();
 //                .ifPresent(System.out::println);
-                System.out.println(random.orElse(0.0E0));
+        System.out.println(random.orElse(0.0E0));
     }
 }

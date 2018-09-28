@@ -80,7 +80,7 @@ public class Exercise1 {
         for (int i = 0; i < 100; i++) {
             array[i] = a.get(i);
         }
-        Arrays.sort(array);
+        Arrays.sort(array); // array posortowana i bez dubli!
 //        int d = a.get(0);
 //        List b = a.subList(0, 4);
 //        a = a[0];
