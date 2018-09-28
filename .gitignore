@@ -40,3 +40,4 @@ buildNumber.properties
 .idea
 
 # project specific files --------------------------------------------------------------------
+*.png
