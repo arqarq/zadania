@@ -34,4 +34,8 @@ class Tree<T> {
     void setRoot(Node<T> root) {
         this.root = root;
     }
+
+    public Node<T> getRoot() {
+        return root;
+    }
 }
