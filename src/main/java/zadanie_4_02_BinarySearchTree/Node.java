@@ -31,10 +31,10 @@ class Node<T> {
 
     @Override
     public String toString() {
-        return "Node {" +
-                "value = " + this.getValue() +
-                ", left = " + this.getLeft() +
-                ", right = " + this.getRight() +
+        return "Node{" +
+                "value = " + value +
+                ", left = " + left +
+                ", right = " + right +
                 '}';
     }
 }
