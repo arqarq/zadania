@@ -5,11 +5,11 @@ class Runner {
 //        Node<Integer> node1 = new Node<>(5);
         BST<Integer> tree = new BST<>();
 
-        tree.insert(3);
-        tree.insert(9);
-        tree.insert(11);
-//        tree.insert(22);
-//        tree.insert(23);
+        tree.insert(19);
+        tree.insert(20);
+        tree.insert(21);
+        tree.insert(22);
+        tree.insert(23);
 
         System.out.println("---In Order");
         tree.traverseInOrder();
@@ -19,6 +19,6 @@ class Runner {
         tree.traversePostOrder();
         System.out.println();
 
-        System.out.println(tree.search(9));
+        System.out.println(tree.search(23));
     }
 }
