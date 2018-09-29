@@ -11,8 +11,9 @@ class Runner {
 
         tree.setRoot(node1);
         node1.setLeft(node2);
-        node1.setRight(node3);
+//        node1.setRight(node3);
         node2.setLeft(node4);
+        node2.setRight(node3);
 
         System.out.println("---In Order");
         tree.traverseInOrder(node1);
