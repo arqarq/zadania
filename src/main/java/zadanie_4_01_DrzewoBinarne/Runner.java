@@ -1,4 +1,4 @@
-package zadanie_4_01_Drzewo;
+package zadanie_4_01_DrzewoBinarne;
 
 class Runner {
     public static void main(String[] aaa) {
