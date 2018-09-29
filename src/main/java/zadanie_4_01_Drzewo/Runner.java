@@ -16,9 +16,9 @@ class Runner {
 
         System.out.println("---In Order");
         tree.traverseInOrder(node1);
-        System.out.println("\n---Pre Order");
+        System.out.format("%n---Pre Order%n");
         tree.traversePreOrder(node1);
-        System.out.println("\n---Post Order");
+        System.out.format("%n---Post Order%n");
         tree.traversePostOrder(node1);
     }
 }
