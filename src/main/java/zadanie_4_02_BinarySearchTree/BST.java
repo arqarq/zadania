@@ -1,9 +1,9 @@
-package zadanie_4_01_Drzewo;
+package zadanie_4_02_BinarySearchTree;
 
-class BinaryTree<T> {
+class BST<T> {
     private Node<T> root;
 
-    BinaryTree(Node<T> root) {
+    BST(Node<T> root) {
         this.root = root;
     }
 
@@ -28,7 +28,7 @@ class BinaryTree<T> {
     }
 
     void traversePreOrder() {
-        traversePreOrder(root);
+            traversePreOrder(root);
     }
 
     private void traversePostOrder(Node<T> node) {
@@ -43,7 +43,8 @@ class BinaryTree<T> {
         traversePostOrder(root);
     }
 
-    private void visit(Node<T> node) {
+
+        private void visit(Node<T> node) {
         System.out.print(node.getValue() + " ");
     }
 
@@ -53,5 +54,15 @@ class BinaryTree<T> {
 
     Node<T> getRoot() {
         return root;
+    }
+
+    void insert (T value){
+        Node<T> node = new Node<>(value);
+        Node<T> current = root;
+
+        if (current == null) {
+            root = node;
+        }
+        
     }
 }

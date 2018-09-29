@@ -9,7 +9,7 @@ class Runner {
         Node<String> node5 = new Node<>("5");
 
         BinaryTree<String> tree = new BinaryTree<>(node1);
-//        tree.setRoot(node1);
+//        tree.setRoot(node1); // setterem
         node1.setLeft(node2);
         node2.setLeft(node4);
         node2.setRight(node3);
@@ -18,8 +18,8 @@ class Runner {
         System.out.println("---In Order");
         tree.traverseInOrder();
         System.out.format("%n---Pre Order%n");
-        tree.traversePreOrder(tree.getRoot());
+        tree.traversePreOrder();
         System.out.format("%n---Post Order%n");
-        tree.traversePostOrder(tree.getRoot());
+        tree.traversePostOrder();
     }
 }
