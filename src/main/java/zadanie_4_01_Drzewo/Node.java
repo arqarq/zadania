@@ -9,11 +9,11 @@ class Node<T> {
         this.value = value;
     }
 
-    public T getValue() {
+    T getValue() {
         return value;
     }
 
-    public Node<T> getLeft() {
+    Node<T> getLeft() {
         return left;
     }
 
@@ -21,7 +21,7 @@ class Node<T> {
         this.left = left;
     }
 
-    public Node<T> getRight() {
+    Node<T> getRight() {
         return right;
     }
 

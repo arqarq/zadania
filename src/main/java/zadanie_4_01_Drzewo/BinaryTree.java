@@ -1,18 +1,26 @@
 package zadanie_4_01_Drzewo;
 
-class Tree<T> {
+class BinaryTree<T> {
     private Node<T> root;
 
-    void traverseInOrder(Node<T> node) {
-        if (node != null){
+    BinaryTree(Node<T> root) {
+        this.root = root;
+    }
+
+    private void traverseInOrder(Node<T> node) {
+        if (node != null) {
             traverseInOrder(node.getLeft());
             visit(node);
             traverseInOrder(node.getRight());
         }
     }
 
+    void traverseInOrder() {
+        traverseInOrder(root);
+    }
+
     void traversePreOrder(Node<T> node) {
-        if (node != null){
+        if (node != null) {
             visit(node);
             traversePreOrder(node.getLeft());
             traversePreOrder(node.getRight());
@@ -20,22 +28,22 @@ class Tree<T> {
     }
 
     void traversePostOrder(Node<T> node) {
-        if (node != null){
+        if (node != null) {
             traversePostOrder(node.getLeft());
             traversePostOrder(node.getRight());
             visit(node);
         }
     }
 
-    void visit(Node<T> node){
+    private void visit(Node<T> node) {
         System.out.print(node.getValue() + " ");
     }
 
-    void setRoot(Node<T> root) {
+/*    void setRoot(Node<T> root) {
         this.root = root;
-    }
+    }*/
 
-    public Node<T> getRoot() {
+    Node<T> getRoot() {
         return root;
     }
 }
