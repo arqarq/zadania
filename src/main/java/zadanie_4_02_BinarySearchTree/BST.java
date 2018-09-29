@@ -1,11 +1,21 @@
 package zadanie_4_02_BinarySearchTree;
 
-class BST<T> {
+import java.util.Optional;
+
+class BST<T extends Comparable<T>> {
     private Node<T> root;
 
-    BST(Node<T> root) {
-        this.root = root;
+//    BST(Node<T> root) {
+//        this.root = root;
+//    }
+
+/*    Node<T> getRoot() {
+        return root;
     }
+
+    void setRoot(Node<T> root) {
+        this.root = root;
+    }*/
 
     private void traverseInOrder(Node<T> node) {
         if (node != null) {
@@ -28,7 +38,7 @@ class BST<T> {
     }
 
     void traversePreOrder() {
-            traversePreOrder(root);
+        traversePreOrder(root);
     }
 
     private void traversePostOrder(Node<T> node) {
@@ -44,25 +54,53 @@ class BST<T> {
     }
 
 
-        private void visit(Node<T> node) {
+    private void visit(Node<T> node) {
         System.out.print(node.getValue() + " ");
     }
 
-/*    void setRoot(Node<T> root) {
-        this.root = root;
-    }*/
+    void insert(T value) {
+        Node<T> node = new Node<>(value);
 
-    Node<T> getRoot() {
-        return root;
+        if (root == null) {
+            root = node;
+            return;
+        }
+        Node<T> current = root;
+        while (true) {
+            if (node.getValue().compareTo(current.getValue()) < 0) {
+                if (current.getLeft() == null) {
+                    current.setLeft(node);
+                    return;
+                }
+                current = current.getLeft();
+            } else {
+                if (current.getRight() == null) {
+                    current.setRight(node);
+                    return;
+                }
+                current = current.getRight();
+            }
+        }
     }
 
-    void insert (T value){
-        Node<T> node = new Node<>(value);
-        Node<T> current = root;
-
-        if (current == null) {
-            root = node;
+    Optional<Node<T>> search(T value) {
+        if (root == null) {
+            return Optional.empty();
         }
-        
+//        if(root.getValue().equals(value)){
+//            return Optional.of(root);
+//        }
+        Node<T> current = root;
+        while (current != null) {
+            if (current.getValue().equals(value)){
+                return Optional.of(current);
+            }
+            if (current.getValue().compareTo(value) < 0){
+                current = current.getRight();
+            } else {
+                current = current.getLeft();
+            }
+        }
+        return Optional.empty();
     }
 }

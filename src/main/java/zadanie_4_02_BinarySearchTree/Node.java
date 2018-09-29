@@ -28,4 +28,13 @@ class Node<T> {
     void setRight(Node<T> right) {
         this.right = right;
     }
+
+    @Override
+    public String toString() {
+        return "Node {" +
+                "value = " + this.getValue() +
+                ", left = " + this.getLeft() +
+                ", right = " + this.getRight() +
+                '}';
+    }
 }
