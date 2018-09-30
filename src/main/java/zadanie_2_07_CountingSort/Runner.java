@@ -16,7 +16,7 @@ class Runner {
 
         printArrayOne(A);
         C = countingSort(A, B, k);
-        printArrayOne(C);                  // albo Array.toString()
+        printArrayOne(C);                  // albo Arrays.toString()
 
         int[] AA = getRandomArrayOne(A.length, 10);
         System.out.println(Arrays.toString(AA));

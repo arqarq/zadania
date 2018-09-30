@@ -7,27 +7,33 @@ public class Utility {
         return new int[1][1];
     }
 
-    public static int[] getRandomArrayOne(int ile, int zakres){
+    public static int[] getRandomArrayOne(int ile, int zakres) {
         Random random = new Random();
         int[] array = new int[ile];
-        for(int i = 0; i < ile; i++){
+        for (int i = 0; i < ile; i++) {
             array[i] = random.nextInt(zakres);
         }
         return array;
     }
 
     public static void printArray(int[][] array) {
+//        for (int[] i : array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j] + "\t");
+            for (int j : array[i]) {
+//            for (int j = 0; j < i.length; j++) {
+                System.out.print(j + "\t");
             }
-            System.out.println();
+            if (i == array.length - 1) {
+                System.out.print("");
+            } else {
+                System.out.println();
+            }
         }
     }
 
     public static void printArrayOne(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int i : array) {
+            System.out.print(i + " ");
         }
         System.out.println();
     }

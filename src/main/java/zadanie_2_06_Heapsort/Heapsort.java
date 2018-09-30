@@ -19,7 +19,7 @@ class Heapsort {
         }
     }
 
-    void maxHeapify(int i) {
+    private void maxHeapify(int i) {
         int largest;
 
         int l = 2 * i + 1;
@@ -40,7 +40,7 @@ class Heapsort {
         }
     }
 
-    void buildMaxHeap() {
+    private void buildMaxHeap() {
         heapSize = heap.length;
         for (int i = heap.length / 2 - 1; i >= 0; i--) {
             maxHeapify(i);
