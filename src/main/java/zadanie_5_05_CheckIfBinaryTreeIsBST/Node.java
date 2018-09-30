@@ -5,7 +5,7 @@ class Node<T> {
     private Node<T> left;
     private Node<T> right;
 
-    Node(T value) {
+    Node(T value){
         this.value = value;
     }
 
@@ -27,14 +27,5 @@ class Node<T> {
 
     void setRight(Node<T> right) {
         this.right = right;
-    }
-
-    @Override
-    public String toString() {
-        return "Node{" +
-                "value = " + value +
-                ", left = " + left +
-                ", right = " + right +
-                '}';
     }
 }
