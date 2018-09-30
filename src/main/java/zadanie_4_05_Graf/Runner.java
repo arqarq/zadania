@@ -5,12 +5,14 @@ import java.util.Arrays;
 class Runner {
     public static void main(String[] args) {
         Graph graph = new Graph();
-//        System.out.println(graph.getNeighbours(3));
-        System.out.println(Arrays.toString(graph.getNeighbours(3)));
-    }
+        System.out.println(graph);
+        int i = 3;
+        System.out.println("Sąsiedzi wierzchołka (" + i + "): " + Arrays.toString(graph.getNeighbours(i)));
+        i = 0;
+        System.out.println("Sąsiedzi wierzchołka (" + i + "): " + Arrays.toString(graph.getNeighbours(i)));
 
-    void dfsPrint(int[][] graph, int start) {
-        IntStack stack = new IntStack(10);
-        int[] arrayVisit = new int[graph.length];
+        graph.dfs(0);
+        graph.dfs(3);
+        graph.bfs(3);
     }
 }
