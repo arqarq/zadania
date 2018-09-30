@@ -7,15 +7,16 @@ class Runner {
         int temp;
         int i = 0;
 
+        stack.push(-1);
         while (c != 0) {
             temp = c % 2;
             stack.push(temp);
             i++;
             c = c / 2;
         }
-        while (i != 0) {
+        while (stack.peek() != -1) {
             System.out.print(stack.pop());
-            i--;
+//            i--;
         }
         System.out.println();
     }
