@@ -5,6 +5,7 @@ import java.util.Arrays;
 class RestWithTab {
     private static final int[] nominals = {10, 5, 2, 1};
     private static final int[] amounts = {12, 10, 11, 18};
+    private String newLine = System.lineSeparator();
 
     private static int greedy(int rest) {
         int c = 0;
@@ -44,6 +45,6 @@ class RestWithTab {
 
     @Override
     public String toString() {
-        return Arrays.toString(nominals) + System.lineSeparator() + Arrays.toString(amounts);
+        return Arrays.toString(nominals) + newLine + Arrays.toString(amounts);
     }
 }
