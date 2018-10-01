@@ -47,7 +47,7 @@ class RestWithMap {
                 rest -= e.getValue() * e.getKey();
                 count += e.getValue();
             }
-            e.setValue(e.getValue() - coinsAmount);
+            e.setValue(e.getValue() - coinsAmount); // zmniejszenie ilości monet w skarbcu
         }
         if (rest > 0) {
             throw new IllegalArgumentException("Insufficient funds!");
