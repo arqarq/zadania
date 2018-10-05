@@ -2,8 +2,8 @@ package zadanie_1_02_IloczynMacierzy;
 
 import static _paczkaPomocnicza.Utility.getRandomArray;
 import static _paczkaPomocnicza.Utility.printArrayWithName;
-import static zadanie_1_02_IloczynMacierzy.Arrays.getLastCount;
-import static zadanie_1_02_IloczynMacierzy.Arrays.multiplyArrays;
+import static zadanie_1_02_IloczynMacierzy.Arrays_.getLastCount;
+import static zadanie_1_02_IloczynMacierzy.Arrays_.multiplyArrays;
 
 class Runner {
     public static void main(String[] args) {
