@@ -13,7 +13,7 @@ class Arrays_ {
         }
 
         if (A[0].length != B.length) {
-            System.out.println("Błąd rozmiarów macierzy!");
+            System.out.println("Błąd rozmiarów macierzy, zwrócono macierz zer");
             count = -1;
         } else {
 
