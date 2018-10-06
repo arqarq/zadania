@@ -12,14 +12,21 @@ class Arrays_ {
             Arrays.fill(row, 0);
         }
 
-        for (int n = 0; n < W.length; n++) {
-            for (int p = 0; p < W[0].length; p++) {
-                for (int i = 0; i < B.length; i++) {
-                    W[n][p] += A[n][i] * B[i][p];
-                    count++;
-                    count++;
+        if (A[0].length != B.length) {
+            System.out.println("Błąd rozmiarów macierzy!");
+            count = -1;
+        } else {
+
+
+            for (int n = 0; n < W.length; n++) {
+                for (int p = 0; p < W[0].length; p++) {
+                    for (int i = 0; i < B.length; i++) {
+                        W[n][p] += A[n][i] * B[i][p];
+                        count++;
+                        count++;
+                    }
+                    count--; //korekta za dodawanie do W[n][p] = 0 na początku
                 }
-                count--; //korekta za dodawanie do W[n][p] = 0 na początku
             }
         }
         return W;
