@@ -16,8 +16,6 @@ class Arrays_ {
             System.out.println("Błąd rozmiarów macierzy, zwrócono macierz zer");
             count = -1;
         } else {
-
-
             for (int n = 0; n < W.length; n++) {
                 for (int p = 0; p < W[0].length; p++) {
                     for (int i = 0; i < B.length; i++) {
