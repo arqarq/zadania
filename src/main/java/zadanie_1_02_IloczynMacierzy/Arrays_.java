@@ -23,7 +23,7 @@ class Arrays_ {
                         count++;
                         count++;
                     }
-                    count--; //korekta za dodawanie do W[n][p] = 0 na początku
+                    count--; // korekta za dodawanie do W[n][p] = 0 na początku
                 }
             }
         }
